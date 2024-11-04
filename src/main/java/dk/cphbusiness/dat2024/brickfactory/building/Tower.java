@@ -12,6 +12,7 @@ public class Tower implements ModelDesign
         buildTool.placeBrick(basic2x2);
         Brick elevatedBasic2x2 = buildTool.translateZ(1, basic2x2);
         buildTool.placeBrick(elevatedBasic2x2);
+
         return buildTool.getModel();
     }
 }

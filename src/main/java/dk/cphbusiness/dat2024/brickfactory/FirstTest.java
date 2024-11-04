@@ -15,8 +15,13 @@ public class FirstTest
         double unit = 8;
         JavaCSG csg = JavaCSGFactory.createNoCaching();
         MockupModelFactoryImpl modelFactory = new MockupModelFactoryImpl(csg, unit);
-        Model tower = modelFactory.createModel(new Tower());
+
+        // Create models
+        //Model modelTester = modelFactory.createRevampModel(new ModelTester());
+        //Model tower = modelFactory.createModel(new Tower());
+        Model helicopterPlatform = modelFactory.createRevampModel(new HelicopterPlatform());
+
         ModelViewer viewer = new ModelViewerImpl(csg);
-        viewer.view(tower);
+        viewer.view(helicopterPlatform);
     }
 }
